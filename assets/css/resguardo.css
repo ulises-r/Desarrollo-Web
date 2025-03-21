@@ -1,0 +1,306 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: block;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+.Contenedor-Header {
+    width: 100%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+    float: left;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    float: left;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.Imagenes {
+    padding: 20px;
+    text-align: center;
+}
+
+.Item-Imagen {
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.Item-Imagen img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.Caja-anuncios {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.Seccion-media {
+    padding: 20px;
+    text-align: center;
+}
+
+.Contenedor-Video {
+    width: 48%;
+    margin-right: 4%;
+    display: inline-block;
+    text-align: center;
+}
+
+.Descripcion-Imagen {
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+}
+
+.Descripcion-Imagen img {
+    width: 200px;
+    height: auto;
+}
+
+main {
+    padding: 100px 20px 20px;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.gallery {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Galeria {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.Item-Galeria {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Item-Galeria img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.Seccion-Informacion {
+    background-color: #d3d3d3;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.Contenedor-Informacion {
+    display: block;
+    text-align: left;
+}
+
+.Texto-Informacion {
+    display: inline-block;
+    width: 70%;
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.Imagen-Informacion {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+}
+
+.Seccion-Enlaces {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.Contenedor-Enlaces ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Contenedor-Enlaces li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.Enlace-Opcion {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 10px 20px;
+    background-color: #c1c1c1;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Enlace-Opcion:hover {
+    background-color: #999;
+}
+
+.Seccion-Servicios-Detalles {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.Subtitulo-Servicios {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.Contenedor-Columnas {
+    width: 100%;
+}
+
+.Columna {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.Columna p {
+    font-weight: bold;
+}
+
+.Columna a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.Columna a:hover {
+    color: #007bff;
+}
+
+.Rectangulo-Contacto {
+    background-color: #dcdcdc;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.Formulario-Contacto {
+    width: 45%;
+    float: left;
+}
+
+.Formulario-Contacto label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.Formulario-Contacto input,
+.Formulario-Contacto textarea {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    vertical-align: middle;
+    resize: none;
+}
+
+.Formulario-Contacto button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Formulario-Contacto button:hover {
+    background-color: #555;
+}
+
+.Informacion-Contacto {
+    width: 45%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+.Informacion-Contacto h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.Informacion-Contacto p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
