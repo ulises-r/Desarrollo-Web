@@ -17,7 +17,7 @@ Si eres un gamer apasionado, un coleccionista o simplemente te gusta estar al d�
 🔹 **Actualizaciones y parches** – Todo lo que debes saber sobre los cambios más recientes en tus juegos favoritos.  
 
 ## 📬 Contacto  
-¿Tienes una sugerencia o quieres colaborar? Escríbenos a [tu-email@example.com] o síguenos en nuestras redes sociales.  
+¿Tienes una sugerencia o quieres colaborar? Escríbenos a [contacto@empresa.com] o síguenos en nuestras redes sociales.  
 
 ---
 
