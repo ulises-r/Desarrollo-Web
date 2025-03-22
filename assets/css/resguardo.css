@@ -3,13 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Aseguramos que todo respete el box model */
 }
 
 body {
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
-    display: block;
+    margin: 0;
 }
 
 header {
@@ -17,32 +20,75 @@ header {
     color: white;
     padding: 15px 0;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     padding: 10px 20px;
     overflow: hidden;
 }
 
+/* No funciona, preguntar a los profesores */
+.hamburger {
+    display: none;
+    /* El ícono de hamburguesa no se ve por defecto */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+
+    /* Ocultar el menú (no funciona) */
+    nav ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Mostrar el icono de hamburguesa */
+    .hamburger {
+        display: block;
+        color: white;
+    }
+
+    /* Estilos para el menú desplegado */
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+    }
+}
+
+/* Aquí termina el bloque que no funciona */
+
+/* Estilo para el contenedor del header */
 .Contenedor-Header {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-items: start;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-right: 20px;
-    float: left;
 }
 
+/* Estilos para el menú de navegación */
 nav ul {
     list-style: none;
     padding: 0;
-    float: left;
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 0 10px;
 }
 
@@ -51,23 +97,35 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Estilo para las imágenes */
 .Imagenes {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 .Item-Imagen {
-    display: inline-block;
+    flex: 1;
+    max-width: 40%;
     text-align: center;
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .Item-Imagen img {
-    width: 150px;
+    width: 100%;
     height: auto;
-    margin-bottom: 10px;
 }
 
+video {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+}
+
+/* Caja de anuncios */
 .Caja-anuncios {
     background-color: #e0e0e0;
     padding: 20px;
@@ -75,21 +133,25 @@ nav ul li a {
     border-radius: 5px;
 }
 
+/* Estilo para la sección de media */
 .Seccion-media {
     padding: 20px;
     text-align: center;
 }
 
+/* Contenedor para video */
 .Contenedor-Video {
-    width: 48%;
-    margin-right: 4%;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     text-align: center;
 }
 
+/* Descripción de la imagen */
 .Descripcion-Imagen {
-    width: 48%;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     text-align: center;
 }
 
@@ -99,12 +161,15 @@ nav ul li a {
 }
 
 main {
+    flex-grow: 1;
     padding: 100px 20px 20px;
     text-align: center;
     width: 100%;
     display: block;
+    padding-bottom: 50px;
 }
 
+/* Galería de imágenes */
 .gallery {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -130,12 +195,14 @@ main {
     margin-bottom: 10px;
 }
 
+/* Información adicional */
 .Seccion-Informacion {
     background-color: #d3d3d3;
     padding: 20px;
     margin-top: 80px;
 }
 
+/* Estilos para las columnas de la sección de información */
 .Contenedor-Informacion {
     display: block;
     text-align: left;
@@ -155,6 +222,7 @@ main {
     vertical-align: middle;
 }
 
+/* Estilo para los enlaces de la sección */
 .Seccion-Enlaces {
     padding: 20px;
     background-color: #f0f0f0;
@@ -185,6 +253,7 @@ main {
     background-color: #999;
 }
 
+/* Detalles de los servicios */
 .Seccion-Servicios-Detalles {
     background-color: #f1f1f1;
     padding: 20px;
@@ -197,18 +266,19 @@ main {
     margin-bottom: 20px;
 }
 
+/* Contenedor de columnas de servicios */
 .Contenedor-Columnas {
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .Columna {
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 5px;
-    display: inline-block;
-    width: 30%;
     text-align: center;
-    margin-right: 20px;
+    box-sizing: border-box;
 }
 
 .Columna p {
@@ -226,18 +296,29 @@ main {
     color: #007bff;
 }
 
+/* Estilo para la sección de contacto */
 .Rectangulo-Contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     background-color: #dcdcdc;
     padding: 20px;
     margin-top: 30px;
     border-radius: 5px;
-    width: 100%;
-    overflow: hidden;
+}
+
+.Formulario-Contacto,
+.Informacion-Contacto {
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .Formulario-Contacto {
-    width: 45%;
-    float: left;
+    background-color: #f9f9f9;
+}
+
+.Informacion-Contacto {
+    background-color: #f1f1f1;
 }
 
 .Formulario-Contacto label {
@@ -254,8 +335,6 @@ main {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    overflow: hidden;
-    vertical-align: middle;
     resize: none;
 }
 
@@ -272,14 +351,6 @@ main {
     background-color: #555;
 }
 
-.Informacion-Contacto {
-    width: 45%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    float: right;
-}
-
 .Informacion-Contacto h3 {
     font-size: 22px;
     margin-bottom: 15px;
@@ -290,17 +361,73 @@ main {
     margin: 10px 0;
 }
 
-.clearfix {
-    clear: both;
-}
-
+/* Estilo para el pie de página */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+}
+
+/* Media Queries para dispositivos */
+@media (max-width: 768px) {
+
+    /* Seccion para las imágenes */
+    .Imagenes {
+        display: flex;
+        flex-direction: column;
+        /* Alinea las imágenes en columna */
+        align-items: center;
+        gap: 20px;
+        /* Espacio entre las imágenes */
+        margin-top: 50px;
+    }
+
+    /* Cada imagen con su descripción */
+    .Item-Imagen {
+        flex: 1;
+        max-width: 100%;
+        /* Imágenes ocupan el 100% del ancho */
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .Item-Imagen img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Sección media (video y su descripción) */
+    .Seccion-media {
+        display: flex;
+        flex-direction: column;
+        /* Apila video e imagen en columna */
+        align-items: center;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .Contenedor-Video,
+    .Contenedor-Imagen {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Descripciones debajo de cada elemento (video e imagen) */
+    .Descripcion-seccion {
+        display: flex;
+        flex-direction: column;
+        /* Descripciones apiladas */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .Descripcion-Video,
+    .Descripcion-Imagen {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
 }
